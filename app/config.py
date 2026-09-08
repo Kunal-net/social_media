@@ -1,6 +1,6 @@
 from pydantic_settings import BaseSettings
 
-class settings(BaseSettings):
+class Settings(BaseSettings):
     IMAGEKIT_PUBLIC_KEY: str
     IMAGEKIT_PRIVATE_KEY: str
     IMAGEKIT_URL: str
@@ -15,3 +15,5 @@ class settings(BaseSettings):
 
     class Config:
         env_file = ".env"
+
+settings = Settings()
